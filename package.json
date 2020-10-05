@@ -1,0 +1,26 @@
+{
+    "name": "blog-backend",
+    "version": "1.0.0",
+    "description": "simple backend for blog-exercise repo. goal is to deploy to heroku.",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vonstroepp/blog-backend.git"
+    },
+    "keywords": [
+        "blog"
+    ],
+    "author": "Patrick Tappe",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/vonstroepp/blog-backend/issues"
+    },
+    "homepage": "https://github.com/vonstroepp/blog-backend#readme",
+    "dependencies": {
+        "express": "^4.17.1"
+    }
+}
