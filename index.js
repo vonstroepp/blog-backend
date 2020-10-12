@@ -1,38 +1,10 @@
-const express = require('express')
-const app = express()
+const app = require('./app')
+const http = require('http')
+const config  = require('./utils/config')
+const logger = require ('./utils/logger')
 
-const blogList = [
-    {
-        id: 1,
-        title: 'Title 01',
-        author: 'Author 01',
-        url: '',
-        likes: 0
-    },
-    {
-        id: 2,
-        title: 'Title 02',
-        author: 'Author 02',
-        url: '',
-        likes: 0
-    },
-    {
-        id: 3,
-        title: 'Title 03',
-        author: 'Author 03',
-        url: '',
-        likes: 0
-    }
-]
+const server = http.createServer(app);
 
-app.get('/', (request, response) => {
-    response.send('<h1>BlogList</h1>')
+server.listen(config.PORT, () => {
+  logger.info(`Server running on port ${config.PORT}`)
 })
-
-app.get('/api/bloglist', (request, response) => {
-    response.json(blogList)
-})
-
-const PORT = 3001
-app.listen(PORT)
-console.log(`Server running on Port ${PORT}`)
