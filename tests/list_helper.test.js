@@ -70,6 +70,13 @@ describe('test the total likes', () => {
     })
 })
 
+describe('test the author with the most likes', () => {
+    test('return complete blog with most likes', () => {
+        const result = listHelper.favoriteBlog(blogs)
+        expect(result).toEqual(blogs[2])
+    })
+})
+
 // test('dummy returns one', () => {
 //     const result = listHelper.dummy(blogs)
 //     expect(result).toBe(1)
