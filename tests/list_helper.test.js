@@ -77,6 +77,8 @@ describe('test the author with the most likes', () => {
     })
 })
 
+//TODO 4.6 and 4.7, investigate lodash
+
 // test('dummy returns one', () => {
 //     const result = listHelper.dummy(blogs)
 //     expect(result).toBe(1)
